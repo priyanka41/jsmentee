@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterators</title>
+</head>
+<body>
+    <script>
+        function FruitsIterator(values){
+          let nextIndex = 0;
+          //we will return an object
+          return{
+              next:function(){
+                  if(nextIndex < values.length){
+                      //we will return below object
+                      return{
+                          value:values[nextIndex++],
+                          done:false
+                      }
+                  }
+                  else{
+                      //we will return below object with only done
+                      return{
+                          done:true
+                      }
+                  }
+              }
+          }
+        }
+        const myArr=['Apples', 'Grapes', 'Banana', 'litchi']
+        console.log(myArr);
+
+        const fruits = FruitsIterator(myArr);
+        console.log(fruits.next())
+        console.log(fruits.next())
+        console.log(fruits.next())
+        console.log(fruits.next())
+        console.log(fruits.next())
+    </script>
+</body>
+</html>
