@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Looops</title>
+</head>
+<body>
+    <script>
+        //objects
+        var myObj = {
+          name: 'Priyanka',
+          phase: function (){
+              return "PriP" ;
+          }
+      }
+      console.log(myObj.phase());
+
+      //arrays
+      arr = ['fruit', 'vegetable' , 'furniture'];
+      marks =[10, 30, 50, 30, 20, 80];
+      mixed = [40, 'str', [2, 8,9]];
+
+      console.log(marks);
+
+
+       //element, index, array
+      arr = ['fruit', 'vegetable' , 'furniture'];
+        arr.forEach(function(element, index, array) {
+           console.log(element, index ); 
+        });
+
+      //loops in js
+        // for(i=0; i<100; i++){
+        //     console.log(i);
+        // }
+
+        //while
+        // let j= 2
+        // while(j<10){
+        //   console.log(j);
+        //j++
+        // }
+
+        //do while
+        let k =0;
+        do{
+          console.log(k+1);
+          k++ ;
+        }while(k<10)
+    </script>
+</body>
+</html>
