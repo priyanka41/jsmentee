@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects and Classes</title>
+</head>
+<body>
+    <script>
+        class User{                                                //CLASS
+            constructor(firstname, lastname, credit){
+                this.firstname = firstname;
+                this.lastname = lastname;
+                this.credit = credit;
+            }
+
+            getFullname(){
+                let fullName = ` ${this.firstname} ${this.lastname} is my full name `
+                return fullName;
+            }
+           editName(newname){
+             const myname =newname.split("");
+             this.firstname = myname[4];
+             this.lastname = myname[6];
+           }
+        }
+        const Priyanka = new User('Priyanka', 'Poudel', 26);            //Object
+        console.log(Priyanka.getFullname());
+        Priyanka.editName('Aditi Poudel');
+        console.log(Priyanka.getFullname());
+        // const Aditi = new User('Aditi', 'Poudel', 12);
+        // console.log(Aditi);
+    </script>
+</body>
+</html>
